@@ -1,0 +1,293 @@
+CRITICAL - 2022-06-19 07:14:00 --> view(): Argument #2 ($data) must be of type array, CodeIgniter\Database\MySQLi\Result given, called in C:\xampp\htdocs\residence\app\Controllers\Home.php on line 11
+in SYSTEMPATH\Common.php on line 1121.
+ 1 APPPATH\Controllers\Home.php(11): view('view_residences', Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 07:35:39 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\ModelResidence.php on line 13.
+ 1 APPPATH\Controllers\Home.php(11): App\Models\ModelResidence->showdata()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-19 07:40:35 --> Unknown column 'c.name' in 'field list'
+CRITICAL - 2022-06-19 07:40:35 --> Unknown column 'c.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`', [], false)
+ 5 APPPATH\Models\ModelResidence.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(11): App\Models\ModelResidence->showdata()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 07:41:35 --> Call to a member function getResult() on array
+in APPPATH\Controllers\Home.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 07:41:47 --> Call to a member function getResult() on array
+in APPPATH\Controllers\Home.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-19 09:15:49 --> Table 'housing.image' doesn't exist
+CRITICAL - 2022-06-19 09:15:49 --> Table 'housing.image' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`
+JOIN `category` as `c` ON `r`.`category_id` = `c`.`id`
+JOIN `image` as `i` ON `r`.`image_id` = `i`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`
+JOIN `category` as `c` ON `r`.`category_id` = `c`.`id`
+JOIN `image` as `i` ON `r`.`image_id` = `i`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`
+JOIN `category` as `c` ON `r`.`category_id` = `c`.`id`
+JOIN `image` as `i` ON `r`.`image_id` = `i`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`
+JOIN `category` as `c` ON `r`.`category_id` = `c`.`id`
+JOIN `image` as `i` ON `r`.`image_id` = `i`.`id`', [], false)
+ 5 APPPATH\Models\ModelResidence.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(11): App\Models\ModelResidence->showdata()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-19 09:15:50 --> Table 'housing.image' doesn't exist
+CRITICAL - 2022-06-19 09:15:50 --> Table 'housing.image' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`
+JOIN `category` as `c` ON `r`.`category_id` = `c`.`id`
+JOIN `image` as `i` ON `r`.`image_id` = `i`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`
+JOIN `category` as `c` ON `r`.`category_id` = `c`.`id`
+JOIN `image` as `i` ON `r`.`image_id` = `i`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`
+JOIN `category` as `c` ON `r`.`category_id` = `c`.`id`
+JOIN `image` as `i` ON `r`.`image_id` = `i`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `a`.`name` as `area_name`, `c`.`name` as `category_name`, `i`.`url` as `img_url`
+FROM `residence` as `r`
+JOIN `area` as `a` ON `r`.`area_id` = `a`.`id`
+JOIN `category` as `c` ON `r`.`category_id` = `c`.`id`
+JOIN `image` as `i` ON `r`.`image_id` = `i`.`id`', [], false)
+ 5 APPPATH\Models\ModelResidence.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(11): App\Models\ModelResidence->showdata()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 09:16:29 --> Undefined property: stdClass::$img_url
+in APPPATH\Views\view_residences.php on line 51.
+ 1 APPPATH\Views\view_residences.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$img_url', 'APPPATH\\Views\\view_residences.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\view_residences.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('view_residences', [], true)
+ 5 APPPATH\Controllers\Home.php(14): view('view_residences', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 09:16:30 --> Undefined property: stdClass::$img_url
+in APPPATH\Views\view_residences.php on line 51.
+ 1 APPPATH\Views\view_residences.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$img_url', 'APPPATH\\Views\\view_residences.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\view_residences.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('view_residences', [], true)
+ 5 APPPATH\Controllers\Home.php(14): view('view_residences', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 09:24:27 --> Undefined property: App\Controllers\Home::$input
+in APPPATH\Controllers\Home.php on line 26.
+ 1 APPPATH\Controllers\Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$input', 'APPPATH\\Controllers\\Home.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->save()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-19 09:24:59 --> Column 'sqm' cannot be null
+CRITICAL - 2022-06-19 09:24:59 --> Column 'sqm' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'Bintaro\', \'1\', \'1\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\', NULL, \'https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/24113305/Cluster-Terbaik-di-BSD-City-The-Zora.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'Bintaro\', \'1\', \'1\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\', NULL, \'https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/24113305/Cluster-Terbaik-di-BSD-City-The-Zora.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'Bintaro\', \'1\', \'1\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum\', NULL, \'https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/24113305/Cluster-Terbaik-di-BSD-City-The-Zora.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (:name:, :category_id:, :area_id:, :desc:, :sqm:, :image_url:)', [...], false)
+ 5 APPPATH\Models\ModelResidence.php(24): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Home.php(33): App\Models\ModelResidence->savedata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->save()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 09:31:59 --> Undefined constant "id"
+in APPPATH\Views\view_residences.php on line 62.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('view_residences', [], true)
+ 4 APPPATH\Controllers\Home.php(14): view('view_residences', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 09:32:58 --> Undefined constant "id"
+in APPPATH\Views\view_residences.php on line 62.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('view_residences', [], true)
+ 4 APPPATH\Controllers\Home.php(14): view('view_residences', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 09:33:14 --> Undefined constant "id"
+in APPPATH\Views\view_residences.php on line 62.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('view_residences', [], true)
+ 4 APPPATH\Controllers\Home.php(14): view('view_residences', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 09:33:15 --> Undefined constant "id"
+in APPPATH\Views\view_residences.php on line 62.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('view_residences', [], true)
+ 4 APPPATH\Controllers\Home.php(14): view('view_residences', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 09:49:16 --> Call to undefined function App\Controllers\alert()
+in APPPATH\Controllers\Home.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->delete()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-19 10:38:49 --> Column 'category_id' cannot be null
+CRITICAL - 2022-06-19 10:38:49 --> Column 'category_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'\', NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'\', NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'\', NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (:name:, :category_id:, :area_id:, :desc:, :sqm:, :image_url:)', [...], false)
+ 5 APPPATH\Models\ModelResidence.php(21): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Home.php(33): App\Models\ModelResidence->savedata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->save()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-19 10:41:29 --> Column 'category_id' cannot be null
+CRITICAL - 2022-06-19 10:41:29 --> Column 'category_id' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'\', NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'\', NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (\'\', NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `residence` (`name`, `category_id`, `area_id`, `desc`, `sqm`, `image_url`) VALUES (:name:, :category_id:, :area_id:, :desc:, :sqm:, :image_url:)', [...], false)
+ 5 APPPATH\Models\ModelResidence.php(21): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Home.php(33): App\Models\ModelResidence->savedata([...])
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->save()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 10:43:03 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->save()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 10:43:21 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 32.
+ 1 APPPATH\Controllers\Home.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Home.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->save()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 10:43:31 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 32.
+ 1 APPPATH\Controllers\Home.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Home.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->save()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 11:18:01 --> Unsupported operand types: string + string
+in APPPATH\Views\view_residences.php on line 59.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('view_residences', [], true)
+ 4 APPPATH\Controllers\Home.php(14): view('view_residences', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 11:18:45 --> Unsupported operand types: string + string
+in APPPATH\Views\view_residences.php on line 58.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('view_residences', [], true)
+ 4 APPPATH\Controllers\Home.php(14): view('view_residences', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-19 12:02:24 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(52): CodeIgniter\Model->__call('getbyid', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->get()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
